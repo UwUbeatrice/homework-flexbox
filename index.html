@@ -1,1 +1,230 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Studio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f3ff;
+            color: #333;
+        }
+
+        /* Task 1: Flexbox header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+            padding: 20px 8%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            color: #7c3aed;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Welcome section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #7c3aed, #ec4899);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* Task 2: Flexible cards */
+        .cards-section {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .cards-section h2 {
+            text-align: center;
+            color: #7c3aed;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1 1 240px;
+            background: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #7c3aed;
+        }
+
+        /* Task 3: Centering on two axes */
+        .center-section {
+            min-height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+            background: #eee8ff;
+        }
+
+        .center-box {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .center-box h2 {
+            color: #7c3aed;
+        }
+
+        button {
+            background: #7c3aed;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #5b21b6;
+        }
+
+        footer {
+            background: #312e81;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Mobile version */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Creative Studio</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+            <h1>Welcome to Creative Studio</h1>
+            <p>Ideas, creativity and inspiration in one place.</p>
+        </section>
+
+        <section class="cards-section" id="services">
+            <h2>Our Services</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Web Design</h3>
+                    <p>Creating simple and beautiful websites.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Photography</h3>
+                    <p>Capturing special moments and ideas.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Branding</h3>
+                    <p>Making creative and unique designs.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Social Media</h3>
+                    <p>Creating content for different platforms.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="center-section" id="contact">
+
+            <div class="center-box">
+                <h2>Let's Work Together!</h2>
+
+                <p>
+                    Have a creative idea?
+                    Let's make something special.
+                </p>
+
+                <button>Contact Us</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Creative Studio | Flexbox Homework</p>
+    </footer>
+
+</body>
+</html>
+
